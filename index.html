@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/294d3b3375.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex">
+  <nav>
+    <h1>Taskly</h1>
+    <ul>
+      <li><a href="#">Kanban Board</a></li>
+      <li><a href="#">Tasks List</a></li>
+      <li><a href="#">Calendar</a></li>
+    </ul>
+    <h6>workspace</h6>
+    <ul>
+      <li><a href="#">projects</a></li>
+      <li><a href="">analytics</a></li>
+    </ul>
+
+  </nav>
+  <div>
+    <header>
+      <button>+ New Task</button>
+      <input type="text" placeholder="Search tasks..">
+      <span class="fa-solid fa-gear"></span>
+      <span class="fa-regular fa-bell"></span>
+      <span class="fa-regular fa-circle-user"></span>
+    </header>
+
+
+
+    <main class="grid grid-cols-3">
+      <section>
+
+        <h2>To Do</h2>
+
+        <span>4</span>
+        <div id="toDo">
+
+        </div>
+      </section>
+      <section>
+        <h2>In Progress</h2>
+        <span>4</span>
+        <div id="in-progress">
+
+        </div>
+      </section>
+      <section>
+        <h2>Done</h2>
+        <span>4</span>
+        <div id="done">
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
