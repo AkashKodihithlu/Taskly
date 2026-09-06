@@ -33,13 +33,22 @@ const tasks = [
   }
 ];
 let nexttId = 5;
-tasks.forEach(task => {
-const taskColumn = document.getElementById(task.column)
-const card = document.createElement('div');
-card.innerHTML = `
-<span class="priority">${task.priority}</span>
-          <h3>${task.title}</h3>
-          <p>${task.dueDate}</p>
-`;
-taskColumn.appendChild(card);
-});
+function renderBoard() {
+  const columnIds = ['todo','in-progress','done'];
+  columnIds.forEach(columnId => {
+    const columnE1 = document.getElementById(columnId);
+    columnE1.innerHTML = "";
+  });
+
+  tasks.forEach(task => {
+    const taskColumn = document.getElementById(task.column);
+    const card = document.createElement('div');
+    card.innerHTML=`
+    <span class="priority">${task.priority}</span>
+      <h3>${task.title}</h3>
+      <p>${task.dueDate}</p>
+    `;
+    taskColumn.appendChild(card);
+  });
+}
+renderBoard();
