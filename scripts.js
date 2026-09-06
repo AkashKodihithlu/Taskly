@@ -34,10 +34,11 @@ const tasks = [
 ];
 let nexttId = 5;
 function renderBoard() {
-  const columnIds = ['todo','in-progress','done'];
+  const columnIds = ['toDo','in-progress','done'];
   columnIds.forEach(columnId => {
     const columnE1 = document.getElementById(columnId);
     columnE1.innerHTML = "";
+    const TaskColumnCount = tasks.filter(task => task.column === columnId).length;
   });
 
   tasks.forEach(task => {
@@ -49,6 +50,7 @@ function renderBoard() {
       <p>${task.dueDate}</p>
     `;
     taskColumn.appendChild(card);
+    
   });
 }
 renderBoard();
